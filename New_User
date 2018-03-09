@@ -1,0 +1,8 @@
+import jira.client
+from jira.client import JIRA
+
+options = {'server' : '<instance>.atlassian.net/'}
+jira = JIRA(options, basic_auth=('<username>', '<password>'))
+jira.add_user('<username>', '<emailaddress>', '<password>', '<username>', False, True, False)
+
+print('ending script')
